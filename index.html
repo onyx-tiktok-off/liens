@@ -65,7 +65,7 @@
     .link-btn {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       position: relative;
       background: rgba(32, 52, 80, 0.52);
       border-radius: 20px;
@@ -74,7 +74,7 @@
       font-size: 1.18rem;
       font-weight: 700;
       box-shadow: 0 4px 24px #18273d26;
-      padding: 20px 0;
+      padding: 14px 20px;
       text-decoration: none;
       backdrop-filter: blur(8px) saturate(1.1);
       transition: 
@@ -85,6 +85,7 @@
       cursor: pointer;
       z-index: 1;
       letter-spacing: 1px;
+      gap: 14px;
     }
     .link-btn:before {
       content: "";
@@ -104,26 +105,28 @@
       box-shadow: 0 8px 32px #25344954, 0 1.5px 12px #202c4216;
       transform: scale(1.03) translateY(-2px);
     }
-    .link-btn .icon {
-      margin-right: 14px;
-      font-size: 1.25em;
+    .link-btn img.icon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
       display: inline-block;
       vertical-align: middle;
-      filter: none;
-      opacity: 0.8;
+      opacity: 0.85;
     }
     /* Responsive */
     @media (max-width: 700px) {
       .logo { width: 77px; height: 77px;}
       .links { max-width: 96vw;}
       h1 { font-size: 1.13rem;}
-      .link-btn { font-size: 0.95rem; padding: 14px 0;}
+      .link-btn { font-size: 0.95rem; padding: 12px 16px;}
+      .link-btn img.icon { width: 22px; height: 22px;}
     }
     @media (max-width: 420px) {
       .logo { width: 45px; height: 45px;}
       .links { max-width: 99vw; gap: 15px;}
       h1 { font-size: 0.79rem;}
-      .link-btn { font-size: 0.76rem; border-radius: 12px; padding: 8px 0;}
+      .link-btn { font-size: 0.76rem; border-radius: 12px; padding: 8px 12px;}
+      .link-btn img.icon { width: 18px; height: 18px;}
     }
     /* Animation douce d'apparition */
     .links, h1, .logo {
@@ -148,11 +151,14 @@
   <img class="logo" src="https://i.ibb.co/bM8VPK9n/ee7e427fc9b6.png" alt="Logo Portail">
   <h1>Portail Communauté</h1>
   <div class="links">
+    <a class="link-btn" href="https://discord.gg/rfrTJr6nXn" target="_blank">
+      <span>🚨</span> FlashNight FA (FiveM)
+    </a>
     <a class="link-btn" href="https://discord.gg/Na8QTPhPh9" target="_blank">
-      <span class="icon">🚚</span> Onyx Transport (ETS2)
+      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Euro_Truck_Simulator_2_Logo.png" alt="ETS2 Logo"> Onyx Transport (ETS2)
     </a>
     <a class="link-btn" href="https://www.tiktok.com/@onyxoff" target="_blank">
-      <span class="icon">🎵</span> TikTok Onyxoff
+      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/TikTok_logo.svg" alt="TikTok Logo"> TikTok Onyxoff
     </a>
   </div>
   <script>
